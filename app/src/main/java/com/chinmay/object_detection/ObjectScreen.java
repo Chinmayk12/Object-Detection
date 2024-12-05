@@ -3,7 +3,6 @@ package com.chinmay.object_detection;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.ImageDecoder;
 import android.net.Uri;
 import android.os.Build;
@@ -31,8 +30,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.mlkit.vision.common.InputImage;
 import com.google.mlkit.vision.label.ImageLabel;
@@ -42,13 +39,12 @@ import com.google.mlkit.vision.label.defaults.ImageLabelerOptions;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
+public class ObjectScreen extends AppCompatActivity {
+    private static final String TAG = "ObjectScreen";
     private static final int REQUEST_CODE_PERMISSIONS = 10;
     private static final String[] REQUIRED_PERMISSIONS = {
             Manifest.permission.CAMERA,
@@ -76,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.object_activity);
 
         // Initialize views
         imageView = findViewById(R.id.imageView);
@@ -179,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onImageSaved(@NonNull ImageCapture.OutputFileResults output) {
                         Uri savedUri = FileProvider.getUriForFile(
-                                MainActivity.this,
+                                ObjectScreen.this,
                                 "com.chinmay.object_detection.fileprovider",  // Ensure this matches the manifest
                                 photoFile
                         );
@@ -191,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onError(@NonNull ImageCaptureException exception) {
                         Log.e(TAG, "Image capture failed", exception);
-                        Toast.makeText(MainActivity.this,
+                        Toast.makeText(ObjectScreen.this,
                                 "Image capture failed", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -233,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .addOnFailureListener(e -> {
                     Log.e(TAG, "Image labeling failed", e);
-                    Toast.makeText(MainActivity.this,
+                    Toast.makeText(ObjectScreen.this,
                             "Image labeling failed", Toast.LENGTH_SHORT).show();
                 });
     }

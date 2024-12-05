@@ -69,7 +69,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class MainActivity extends AppCompatActivity {
+public class ObjectScreen extends AppCompatActivity {
     private ImageView imageView;
     private TextView resultTextView;
     private ExecutorService cameraExecutor;
@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(MainActivity.this,
+                        Toast.makeText(ObjectScreen.this,
                                 "Image labeling failed: " + e.getMessage(),
                                 Toast.LENGTH_SHORT).show();
                     }
