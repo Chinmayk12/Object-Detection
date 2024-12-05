@@ -96,6 +96,7 @@ Build and run the project on a physical Android device (CameraX may not function
 
 ## Screenshots
 
+![splashScreen](https://github.com/user-attachments/assets/9f5a7236-a775-42f9-8bb0-518f2586c965)
 ![object-1](https://github.com/user-attachments/assets/2a31ba39-73a2-4fec-9784-59770a2728a6)
 ![object-2](https://github.com/user-attachments/assets/bc21ecdc-1030-47eb-bb0a-ee74ea79c3c6)
 
