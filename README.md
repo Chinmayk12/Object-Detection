@@ -4,6 +4,9 @@
 
 This app was built overnight as part of a personal project, and I encourage contributions to enhance its functionality and performance.
 
+## Download Link:
+https://drive.google.com/file/d/1K_9RTZ-1UAa3kNHQgSwSJqJCQuIIYyTP/view?usp=sharing
+
 ## Features
 
 - **CameraX Integration**: Provides a reliable camera interface for taking pictures.
