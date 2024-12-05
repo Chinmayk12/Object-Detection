@@ -20,7 +20,7 @@ https://drive.google.com/file/d/1K_9RTZ-1UAa3kNHQgSwSJqJCQuIIYyTP/view?usp=shari
 - **CameraX**: For managing camera access, providing easy-to-use APIs for photo capture and video analysis.
 - **ML Kit**: Google's machine learning library for vision-based image labeling.
 - **Android SDK**: Used for building the Android application, including views, activities, and services.
-- **Java**: Programming language used for app development.
+- **Java**: Programming language used for app development
 
 ## Requirements
 
